@@ -1,0 +1,10 @@
+services:
+  - type: cron
+    name: stock-alert
+    schedule: "*/15 * * * *"  # ทุก 15 นาที
+    command: "python main.py"
+    envVars:
+      - key: TELEGRAM_TOKEN
+        value: 7847937853:AAEySpLTJIXyXHrgcN9LBTPw-JtTlxwONpM
+      - key: TELEGRAM_CHAT_ID
+        value: 8168100336
